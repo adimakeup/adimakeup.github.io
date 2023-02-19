@@ -6,7 +6,7 @@
  * 3-Middle containers
 */
 
-/*1-CSS Variables*/
+/* 1-CSS Variables */
 :root{
   --primary-pink:#eddedb;
   --secondary-purple:#6562ac;
@@ -47,21 +47,25 @@ nav li.dropdown ul a:hover{
   border-bottom: .2em solid var(--primary-pink);
 }
 
-/*2-Top container*/
+/* 2-Top container */
 .top-container{
   position: relative;
-  min-height: 57em;
+  height: 101vh;
   padding: 17em 0 0 10em;
-  margin-top: -5em;
-  z-index: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: -6em;
+  z-index: 0
 }
 
 .top-container video{
-  position: fixed;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%,-85%);
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
   z-index: -1000;
 }
 
@@ -71,6 +75,7 @@ nav li.dropdown ul a:hover{
   gap: 2em;
   justify-content: center;
   align-items: flex-start;
+  margin-top: -15em;
 }
 
 .top-container .title-message{
@@ -80,7 +85,6 @@ nav li.dropdown ul a:hover{
   font-family: 'Great Vibes';
   letter-spacing: .6em;
   transform: rotate(-5deg);
-  margin-top: 1em;
 }
 
 div.scroll-outline{
@@ -154,6 +158,73 @@ div.scroll-dot{
     opacity:0;
   }
 }
+
+/* 2.5-Media Queries */
+@media(max-width: 1800px){
+  .top-container .title-message{
+    font-size: 3.7em;
+  }
+}
+
+@media(max-width: 1400px){  
+  .top-container .title-message{
+    font-size: 3em;
+    margin-top: 2em;
+  }
+}
+
+@media(max-width: 1200px){
+  .top-container{
+    justify-content: center;
+  }
+  
+  .top-container section.intro{
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .top-container .title-message{
+    font-size: 3em;
+    margin-top: 2em;
+  }
+}
+
+@media(max-width: 1000px){
+  .top-container .title-message{
+    font-size: 2.3em;
+    margin-top: 3.5em;
+  }
+}
+
+@media(max-width: 800px){  
+  .top-container .title-message{
+    font-size: 2em;
+    margin-top: 7em;
+  }
+  
+  .top-container a.cta-button{
+    font-size: 1em;
+  }
+}
+
+@media(max-width: 700px){  
+  .top-container .title-message{
+    font-size: 1.5em;
+    margin-top: 11em;
+  }
+}
+
+@media(max-width: 600px){
+  .top-container .title-message{
+    font-size: 1,4em;
+    margin-top: 17em;
+  }
+  
+  .top-container a.cta-button{
+    font-size: 1em;
+  }
+}
+
 
 /*3-Middle containers*/
 
