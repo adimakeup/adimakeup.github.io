@@ -72,6 +72,25 @@ sup{
   transform: scale(.9);
 }
 
+.cta-button2{
+  padding: .7em;
+  border: .2em solid var(--primary-pink);
+  background: none;
+  color: var(--secondary-pink);
+  border-radius: .25em;
+  transition: .15s;
+  margin-top: 2em;
+}
+
+.cta-button2:hover{
+  background: var(--primary-pink);
+  color: var(--secondary-pink);
+}
+
+.cta-button2:active{
+  transform: scale(.9);
+}
+
 /* 5-Header */
 header{
   display: grid;

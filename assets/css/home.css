@@ -230,28 +230,32 @@ div.scroll-dot{
   z-index: 100000;
 }
 .three-boxes{
-  padding: 3em;
+  padding: 2.5em;
   line-height: 1.5;
   background: var(--primary-pink);
   color: var(--secondary-pink);
-  z-index: 110000;
+  z-index: 100000;
+}
+
+.three-boxes section{
+  background: var(--light);
+  padding: 1em;
+  margin: 1em;
+  border-radius: .25em;
 }
 
 .three-boxes h4{
   font-family: Mukta;
   text-align: center;
-  font-size: 1.5em;
-  font-weight: bold;
+  font-size: 1.8em;
 }
 
 .three-boxes p{
-  font-family: Cabin;
+  font-family: Mukta;
+  font-size: 1.1em;
   padding: 0 3em;
   text-align: justify;
-}
-
-.three-boxes p:first-of-type:first-letter {
-  font-size: 2em;
+  color: var(--dark);
 }
 
 .three-boxes a{
@@ -288,7 +292,7 @@ div.scroll-dot{
   align-items: center;
 }
 
-.two-boxes div.left-box h3{
+.two-boxes h3{
   font-family: Mukta;
   color: var(--secondary-pink);
   font-size: 2.2em;
@@ -298,11 +302,11 @@ div.scroll-dot{
   padding-bottom: .5em;
 }
 
-.two-boxes div.left-box p{
+.two-boxes p{
   font-family: 'Mukta';
   font-size: 1.1em;
   text-align: justify;
-  line-height: 1.2em;
+  line-height: 1.5;
 }
 
 .two-boxes div.right-box{
@@ -316,15 +320,6 @@ div.scroll-dot{
   justify-content: end;
   align-items: stretch;
   padding: 2em;
-}
-
-.two-boxes a.about-container{
-  padding: .7em;
-  border: .2em solid var(--primary-pink);
-  background: none;
-  color: var(--secondary-pink);
-  border-radius: .25em;
-  transition: .15s;
 }
 
 .two-boxes a.about-container:hover{
@@ -343,23 +338,6 @@ div.scroll-dot{
   align-items: flex-start;
   background: var(--light);
   padding: 1em;
-}
-
-.two-boxes .inside-box h3{
-  font-family: Mukta;
-  color: var(--secondary-pink);
-  font-size: 2.2em;
-  text-align: center;
-  position: relative;
-  z-index: 2;
-  padding-bottom: .5em;
-}
-
-.two-boxes .inside-box p{
-  font-family: 'Mukta';
-  font-size: 1.1em;
-  text-align: justify;
-  line-height: 1.2em;
 }
 
 #wrapper{
