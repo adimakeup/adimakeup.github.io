@@ -60,7 +60,7 @@ nav li.dropdown ul a:hover{
 }
 
 .top-container video{
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -225,9 +225,7 @@ div.scroll-dot{
   }
 }
 
-
-/*3-Middle containers*/
-
+/* 3-Middle containers */
 .middle-containers{
   z-index: 100000;
 }
