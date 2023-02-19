@@ -177,6 +177,9 @@ div.scroll-dot{
 @media(max-width: 1200px){
   .top-container{
     justify-content: center;
+    padding: 0;
+    padding-left: .2em;
+    padding-right: .2em;
   }
   
   .top-container section.intro{
@@ -211,14 +214,12 @@ div.scroll-dot{
 @media(max-width: 700px){  
   .top-container .title-message{
     font-size: 1.5em;
-    margin-top: 11em;
   }
 }
 
 @media(max-width: 600px){
   .top-container .title-message{
-    font-size: 1,4em;
-    margin-top: 17em;
+    font-size: 1.4em;
   }
   
   .top-container a.cta-button{
