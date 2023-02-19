@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <!-- Metas -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name='keywords' content='Adi Makeup,Adi,Makeup,Hair,Hair Salon,Maquilhagem,Adriana,Cabelo,Cabeleireiro,Cabeleireira,Qualidade,Baixo Preço,Preço-Qualidade,Algarve,Portimão'>
+  <meta name='description' content=''>
+  <meta name='subject' content=''>
+  <meta name='copyright' content=''>
+  <meta name='author' content=''>
+  <meta name='designer' content=''>
+  <meta name='reply-to' content=''>
+  <meta name='owner' content=''>
+  <meta name='coverage' content=''>
+  <meta name='distribution' content=''>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <!-- Title -->
+  <title>Adi Makeup | Contacts</title>  
+  
+  <!-- Minified css reset and main css -->
+  <link rel="stylesheet" href="assets/css/reset.css">
+  <link rel="stylesheet" href="assets/css/main.css">
+  <!-- Page specific css -->
+  <link rel="stylesheet" href="assets/css/contacts.css">
+  
+  <!-- Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"                                           rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" rel="stylesheet">
+  
+  <!-- Favicon -->
+  <link href="assets/icon/favicon.png" rel="icon">
+</head>
+<body id="body">
+  <h1 class="hidden-heading">Contacts Page</h1>
+  <!-- Content-wrapper -->
+  <main>
+    <!-- Header -->
+    <header class="header-menu">
+      <h2 class="hidden-heading">Page header</h2>
+      <div class="logo-container">
+        <a href="index.html"><img src="assets/images/logo.svg" alt="Adi Makeup Logo" class="logo"></a>
+      </div>
+      <!-- Menu desktop -->
+      <nav class="desktop-menu">
+        <h3 class="hidden-heading">Navigation menu</h3>
+        <ul>
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li class="dropdown">
+            <a href="portfolio.html">
+              <div class="dropdown-container">
+                Portfolio 
+                <i class="material-icons">arrow_drop_down</i>
+              </div>
+            </a>
+            <ul>
+              <li><a href="areas">blablabla</a></li>
+              <li><a href="areas">blebleble</a></li>
+            </ul>
+          </li>
+          <li><a href="services.html">Serviços</a></li>
+          <li><a href="contacts.html" class="current-page">Contactos</a></li>
+          <li><a href="about.html">Sobre</a></li>
+        </ul>
+      </nav>
+      <!-- Menu mobile -->
+      <nav class="mobile-menu">
+        <div class="hamburger-middle" id="hamburger"></div>
+        <ul id="mobileMenu">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Serviços</a></li>
+          <li><a href="contacts.html" class="current-page-mobile">Contactos</a></li>
+          <li><a href="about.html">Sobre</a></li>
+        </ul>
+      </nav>
+    </header>
+    
+    
+
+    <article class="contact-form">
+      <h2>Contacte-me</h2>
+      <div class="contacts-container">
+        <div class="information-container">
+          <span class="copy-icon"><span id="copyIcon1"><i class="material-icons" style='font-size: 1.25em;'>file_copy</i></span></span>
+          <input type="text" class="contacts-info" id="copyContainer1" value="Email: allab.di@ubi.pt" readonly>
+          <span class="copy-icon"><span id="copyIcon2"><i class="material-icons" style='font-size: 1.25em;'>file_copy</i></span></span>
+          <input type="text" class="contacts-info" id="copyContainer2" value="Telemóvel: +351 968 661 568" readonly>
+        </div>
+
+        <form action="contactUs.php" method="post">
+          <label>
+            <div class="required-field-container">
+              <span class="input-label">Name</span>
+              <div class="required-field" title="This is a required field">*</div>
+            </div>
+            <input type="text" name="name" value="<?php if(isset($_GET['name'])){echo($_GET['name']);}?>" style="<?php if(isset($_GET['error']) && $_GET['error'] == 'emptyFields' && isset($_GET['name']) && $_GET['name'] == ''){echo('border: 2px solid #c0392b;');}?>" required>
+          </label>
+
+          <label>
+            <div class="required-field-container">
+              <span class="input-label">Email</span>
+              <div class="required-field" title="This is a required field">*</div>
+            </div>
+            <input type="email" name="email" value="<?php if(isset($_GET['email'])){echo($_GET['email']);}?>" style="<?php if((isset($_GET['error']) && $_GET['error'] == 'emptyFields' && isset($_GET['email']) && $_GET['email'] == '')||(isset($_GET['error']) && $_GET['error'] == 'incorrectEmailFormat')){echo('border: 2px solid #c0392b;');}?>" required>
+          </label>
+
+          <label>
+            <span class="input-label">Subject</span>
+            <select name="subject" id="subjectSelect">
+              <optgroup label="Work">
+                <option value="I want to join the lab" <?php if(isset($_GET['subject']) && $_GET['subject']=="I want to join the lab"){echo('selected');}?>>I want to join the lab</option>
+                <option value="I want to propose a new project" <?php if(isset($_GET['subject']) && $_GET['subject']=="I want to propose a new project"){echo('selected');}?>>I want to propose a new project</option>
+                <option value="I want to collaborate" <?php if(isset($_GET['subject']) && $_GET['subject']=="I want to collaborate"){echo('selected');}?>>I want to collaborate</option>
+              </optgroup>
+              <optgroup label="Information">
+                <option value="I can't find the lab" <?php if(isset($_GET['subject']) && $_GET['subject']=="I can't find the lab"){echo('selected');}?>>I can't find the lab</option>
+                <option value="I want to know more about the lab" <?php if(isset($_GET['subject']) && $_GET['subject']=="I want to know more about the lab"){echo('selected');}?>>I want to know more about the lab</option>
+                <option value="I need some other information" <?php if(isset($_GET['subject']) && $_GET['subject']=="I need some other information"){echo('selected');}?>>I need some other information</option>
+              </optgroup>
+              <optgroup label="Other">
+                <option value="Other" <?php if(isset($_GET['subject']) && $_GET['subject']=="Other"){echo('selected');}?>>Other</option>
+              </optgroup>
+            </select>
+            <input type="text" name="specifiedSubject" placeholder="Please specify" id="specifiedSubject" style="<?php if(isset($_GET['subject']) && $_GET['subject']=="Other" && isset($_GET['specifiedSubject'])){echo('display: block;');}else{echo('display: none;');}?>" value="<?php if(isset($_GET['subject']) && $_GET['subject']=="Other" && isset($_GET['specifiedSubject'])){echo($_GET['specifiedSubject']);}?>">
+          </label>
+
+          <label>
+            <div class="required-field-container">
+              <span class="input-label">Message</span>
+              <div class="required-field" title="This is a required field">*</div>
+            </div>
+            <textarea name="message" style="<?php if(isset($_GET['error']) && $_GET['error'] == 'emptyFields' && isset($_GET['message']) && $_GET['message'] == ''){echo('border: 2px solid #c0392b;');}?>" required><?php if(isset($_GET['message'])){echo($_GET['message']);}?></textarea>
+          </label>
+
+          <input type="submit" name="submitContactForm" value="Submit">
+        </form> 
+      </div>
+    </article>
+
+    <!-- Footer -->
+    <footer>
+      <div class="footer-sections">
+        <section>
+          <h3>Adi Makeup</h3>
+          <ul>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="services.html">Serviços</a></li>
+            <li><a href="contacts.html">Contactos</a></li>
+            <li><a href="about.html">Sobre</a></li>
+          </ul>
+        </section>
+        <section class="contact-footer">
+          <h3>Contacte-me</h3>
+          <ul>
+            <li><span class="material-symbols-outlined">call</span>&nbsp;&nbsp;+351<span class="no-copy"></span>968<span class="no-copy"></span>661<span class="no-copy"></span>568</li>
+            <li><span class="material-symbols-outlined">mail</span>&nbsp;&nbsp;adimakeupatelier@gmail.com</li>
+          </ul>
+        </section>
+        <section class="socialMedia-footer">
+          <h3>Redes Sociais</h3>
+          <ul>
+            <li><a href="https://www.facebook.com/adimakeupartist/" target="_blank"><i class="fab fa-facebook"></i></a></li>
+            <li><a href="https://www.instagram.com/adimakeupbeauty/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="https://twitter.com/adimakeupatelie" target="_blank"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="https://www.youtube.com/channel/UC_UWAKveRjQefgx7jguPmBQ/featured" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            <li><a href="https://www.pinterest.com/adimakeup/" target="_blank"><i class="fab fa-pinterest"></i></a></li>
+            <li><a href="https://www.tiktok.com/@adimakeupatelier" target="_blank"><i class="fab fa-tiktok"></i></a></li>
+          </ul>
+        </section>
+      </div>
+      <div>
+        <hr>
+        <p>Copyright Adri Makeup &copy; <script>document.write(new Date().getFullYear())</script></p>
+      </div>
+    </footer>
+  </main>
+  <!--Main js-->
+  <script src="assets/js/main.js"></script>
+
+  <!--Page specific js-->
+  <script src="assets/js/contacts.js"></script>
+  
+  <!-- Icon js -->
+  <script src="https://kit.fontawesome.com/52b0b0a261.js" crossorigin="anonymous"></script>
+</body>
+</html>
