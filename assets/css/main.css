@@ -79,7 +79,6 @@ sup{
   color: var(--secondary-pink);
   border-radius: .25em;
   transition: .15s;
-  margin-top: 2em;
 }
 
 .cta-button2:hover{
