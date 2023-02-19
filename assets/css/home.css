@@ -4,6 +4,7 @@
  * 2-Header
  * 2-Top container
  * 3-Middle containers
+ * 4-Other Media Queries
 */
 
 /* 1-CSS Variables */
@@ -352,6 +353,10 @@ div.scroll-dot{
 
 .link{
   margin-top: 21em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
 }
 
 .link a{
@@ -369,21 +374,22 @@ div.scroll-dot{
   color: var(--secondary-pink);
 }
 
-.container {
+.container{
   position: relative;
   width: 320px;
   margin: 100px auto 0 auto;
   perspective: 1000px;
 }
 
-.carousel {
+.carousel{
   position: absolute;
   width: 100%;
   height: 100%;
   transform-style: preserve-3d; 
-  animation: rotate360 60s infinite forwards linear;
+  animation: rotate360 70s infinite forwards linear;
 }
-.carousel__face { 
+
+.carousel-face{ 
   position: absolute;
   width: 300px;
   height: 187px;
@@ -397,46 +403,72 @@ div.scroll-dot{
   align-items: center;
   padding: 1.5em;
   font-family: 'Mukta';
+  background: var(--light);
 }
 
-.carousel__face h1{
+.carousel-face h1{
   font-size: 1.2em;
+  position: relative;
+  cursor: help;
 }
 
-.carousel__face p{
+.carousel-face h1::after{
+  display: inline-block;
+  position: absolute;
+  top: 1.5em;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  content: "5/5 Estrelas";
+  font-size: .7em;
+  background-color: #ffba10;
+  padding: .5em;
+  box-shadow: 0 2px 6px 0 rgba(0,0,0,.5), inset 0 -1px 0 0 #dadce0;
+  font-weight: bold;
+  transform: scale(0);
+  transition: .2s;
+}
+
+.carousel-face h1:hover::after{
+  transform: scale(1);
+}
+
+.carousel-face p{
   font-size: .7em;
 }
 
+.carousel-face:nth-child(1){
+  transform: rotateY(  0deg) translateZ(430px);
+}
+.carousel-face:nth-child(2){ 
+  transform: rotateY( 40deg) translateZ(430px);
+}
 
-.carousel__face:nth-child(1) {
-  background: #fff;
-  transform: rotateY(  0deg) translateZ(430px); }
-.carousel__face:nth-child(2) { 
-  background: #fff;
-    transform: rotateY( 40deg) translateZ(430px); }
-.carousel__face:nth-child(3) {
-  background: #fff;
-  transform: rotateY( 80deg) translateZ(430px); }
-.carousel__face:nth-child(4) {
-  background: #fff;
-  transform: rotateY(120deg) translateZ(430px); }
-.carousel__face:nth-child(5) { 
-  background: #fff;
- transform: rotateY(160deg) translateZ(430px); }
-.carousel__face:nth-child(6) { 
-  background: #fff;
- transform: rotateY(200deg) translateZ(430px); }
-.carousel__face:nth-child(7) { 
-  background: #fff;
- transform: rotateY(240deg) translateZ(430px); }
-.carousel__face:nth-child(8) {
-  background: #fff;
-  transform: rotateY(280deg) translateZ(430px); }
-.carousel__face:nth-child(9) {
-  background: #fff;
-  transform: rotateY(320deg) translateZ(430px); }
+.carousel-face:nth-child(3){
+  transform: rotateY( 80deg) translateZ(430px);
+}
+.carousel-face:nth-child(4){
+  transform: rotateY(120deg) translateZ(430px);
+}
 
+.carousel-face:nth-child(5){ 
+  transform: rotateY(160deg) translateZ(430px);
+}
+.carousel-face:nth-child(6){ 
+  transform: rotateY(200deg) translateZ(430px);
+}
 
+.carousel-face:nth-child(7){ 
+  transform: rotateY(240deg) translateZ(430px);
+}
+
+.carousel-face:nth-child(8){
+  transform: rotateY(280deg) translateZ(430px);
+}
+
+.carousel-face:nth-child(9){
+  transform: rotateY(320deg) translateZ(430px);
+}
 
 @keyframes rotate360 {
   from {
@@ -446,7 +478,6 @@ div.scroll-dot{
     transform: rotateY(-360deg);
   }
 }
-
 
 .call-to-action{
   padding: 2em;
@@ -484,96 +515,7 @@ div.scroll-dot{
   opacity: .5;
 }
 
-.publications{
-  padding: 3em;
-  line-height: 1.5;
-}
-
-.publications h3{
-  text-align: center;
-  font-size: 1.5em;
-  padding-bottom: 1em;
-}
-
-.publication-image{
-  min-height: 15em;
-  margin: 1em 0;
-  
-}
-
-.publication-title{
-  font-size: 1.1em;
-  font-weight: bold;
-}
-
-.posts{
-  display: flex;
-  justify-content: space-around;
-}
-
-.post{
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 30%;
-  padding: 2em;
-  border-radius: .2em;
-  box-shadow: 0 2px 6px 0 rgba(0,0,0,.22), inset 0 -1px 0 0 #dadce0;
-}
-
-.post-description{
-  font-size: .85em;
-}
-
-.post-description-container{
-  max-height: 120px;
-  position: relative;
-  overflow: hidden;
-}
-
-.post-description-container .fade{
-  position: absolute; 
-  bottom: -1em; 
-  left: 0;
-  width: 100%; 
-  text-align: center; 
-  margin: 0;
-  padding: 55px 0; 
-  font-size: .8em;
-  background-image: linear-gradient(to bottom, transparent, #fff);
-}
-
-.posts a{
-  background: var(--primary-green);
-  padding: .5em;
-  border-radius: .2em;
-  color: var(--light);
-  width:6em;
-  margin-top: .5em;
-  transition: .2s;
-}
-
-.posts a:hover{
-  background: var(--primary-purple);
-}
-
-.posts a:active{
-  transform: scale(.9);
-}
-
 /* 3.5-Media Queries */
-/*@media(max-width: 1800px){
-  .top-container .title-message{
-    font-size: 3.7em;
-  }
-}*/
-
-/*@media(max-width: 1400px){  
-  .top-container .title-message{
-    font-size: 3em;
-    margin-top: 2em;
-  }
-}*/
 
 @media(max-width: 1200px){
   .two-boxes{
@@ -584,12 +526,6 @@ div.scroll-dot{
     padding: 1.5em;  
   }
 }
-
-/*@media(max-width: 1000px){
-  .two-boxes{
-    flex-direction: column;
-  }
-}*/
 
 @media(max-width: 800px){  
   .two-boxes .inside-box{
@@ -613,18 +549,7 @@ div.scroll-dot{
   }
 }
 
-/*@media(max-width: 600px){
-  .top-container .title-message{
-    font-size: 1,4em;
-    margin-top: 17em;
-  }
-  
-  .top-container a.cta-button{
-    font-size: 1em;
-  }
-}*/
-
-/*4.5-Media Queries*/
+/* 4.5-Media Queries */
 @media(max-width: 1100px){
   nav.mobile-menu div.hamburger-middle{
     width: 1.7em;
