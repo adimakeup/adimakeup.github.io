@@ -93,52 +93,40 @@
           <input type="text" class="contacts-info" id="copyContainer2" value="Telemóvel: +351 968 661 568" readonly>
         </div>
 
-        <form action="contactUs.php" method="post">
+        <form action="https://usebasin.com/f/220e06ea18f8" method="POST" enctype="multipart/form-data">
           <label>
             <div class="required-field-container">
-              <span class="input-label">Name</span>
-              <div class="required-field" title="This is a required field">*</div>
+              <span class="input-label">Nome</span>
+              <div class="required-field" title="Este é um campo obrigatório!">*</div>
             </div>
-            <input type="text" name="name" value="<?php if(isset($_GET['name'])){echo($_GET['name']);}?>" style="<?php if(isset($_GET['error']) && $_GET['error'] == 'emptyFields' && isset($_GET['name']) && $_GET['name'] == ''){echo('border: 2px solid #c0392b;');}?>" required>
+            <input type="text" name="name" required>
           </label>
 
           <label>
             <div class="required-field-container">
               <span class="input-label">Email</span>
-              <div class="required-field" title="This is a required field">*</div>
+              <div class="required-field" title="Este é um campo obrigatório!">*</div>
             </div>
-            <input type="email" name="email" value="<?php if(isset($_GET['email'])){echo($_GET['email']);}?>" style="<?php if((isset($_GET['error']) && $_GET['error'] == 'emptyFields' && isset($_GET['email']) && $_GET['email'] == '')||(isset($_GET['error']) && $_GET['error'] == 'incorrectEmailFormat')){echo('border: 2px solid #c0392b;');}?>" required>
+            <input type="email" name="email" required>
           </label>
-
+          
           <label>
-            <span class="input-label">Subject</span>
-            <select name="subject" id="subjectSelect">
-              <optgroup label="Work">
-                <option value="I want to join the lab" <?php if(isset($_GET['subject']) && $_GET['subject']=="I want to join the lab"){echo('selected');}?>>I want to join the lab</option>
-                <option value="I want to propose a new project" <?php if(isset($_GET['subject']) && $_GET['subject']=="I want to propose a new project"){echo('selected');}?>>I want to propose a new project</option>
-                <option value="I want to collaborate" <?php if(isset($_GET['subject']) && $_GET['subject']=="I want to collaborate"){echo('selected');}?>>I want to collaborate</option>
-              </optgroup>
-              <optgroup label="Information">
-                <option value="I can't find the lab" <?php if(isset($_GET['subject']) && $_GET['subject']=="I can't find the lab"){echo('selected');}?>>I can't find the lab</option>
-                <option value="I want to know more about the lab" <?php if(isset($_GET['subject']) && $_GET['subject']=="I want to know more about the lab"){echo('selected');}?>>I want to know more about the lab</option>
-                <option value="I need some other information" <?php if(isset($_GET['subject']) && $_GET['subject']=="I need some other information"){echo('selected');}?>>I need some other information</option>
-              </optgroup>
-              <optgroup label="Other">
-                <option value="Other" <?php if(isset($_GET['subject']) && $_GET['subject']=="Other"){echo('selected');}?>>Other</option>
-              </optgroup>
-            </select>
-            <input type="text" name="specifiedSubject" placeholder="Please specify" id="specifiedSubject" style="<?php if(isset($_GET['subject']) && $_GET['subject']=="Other" && isset($_GET['specifiedSubject'])){echo('display: block;');}else{echo('display: none;');}?>" value="<?php if(isset($_GET['subject']) && $_GET['subject']=="Other" && isset($_GET['specifiedSubject'])){echo($_GET['specifiedSubject']);}?>">
+            <div class="required-field-container">
+              <span class="input-label">Assunto</span>
+              <div class="required-field" title="Este é um campo obrigatório!">*</div>
+            </div>
+            <input type="text" name="subject" required>
           </label>
 
           <label>
             <div class="required-field-container">
-              <span class="input-label">Message</span>
-              <div class="required-field" title="This is a required field">*</div>
+              <span class="input-label">Mensagem</span>
+              <div class="required-field" title="Este é um campo obrigatório!">*</div>
             </div>
-            <textarea name="message" style="<?php if(isset($_GET['error']) && $_GET['error'] == 'emptyFields' && isset($_GET['message']) && $_GET['message'] == ''){echo('border: 2px solid #c0392b;');}?>" required><?php if(isset($_GET['message'])){echo($_GET['message']);}?></textarea>
+            <textarea name="message" required></textarea>
           </label>
 
-          <input type="submit" name="submitContactForm" value="Submit">
+          <input type="submit" name="submitContactForm" value="Submit" class="cta-button3">
         </form> 
       </div>
     </article>

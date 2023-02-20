@@ -91,6 +91,24 @@ sup{
   transform: scale(.9);
 }
 
+.cta-button3{
+  padding: .7em;
+  border: .2em solid var(--secondary-pink);
+  background: none;
+  color: var(--primary);
+  border-radius: .25em;
+  transition: .15s;
+}
+
+.cta-button3:hover{
+  background: var(--secondary-pink);
+  color: var(--primary-pink);
+}
+
+.cta-button3:active{
+  transform: scale(.9);
+}
+
 /* 5-Header */
 header{
   display: grid;

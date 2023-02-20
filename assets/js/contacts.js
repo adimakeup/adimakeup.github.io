@@ -1,13 +1,3 @@
-//toggles the specify input when other is inactive
-function toggleInput(selectValue){
-  if(selectValue=="Other"){
-    document.getElementById("specifiedSubject").style.display="block";
-  }
-  else{
-    document.getElementById("specifiedSubject").style.display="none";  
-  }
-}
-
 //copies contact info to the clipboard
 async function copyTextToClipboard(id, skip, id2){
   valueToCopy = id.value.substring(skip).replaceAll(" ","");
@@ -22,10 +12,6 @@ async function copyTextToClipboard(id, skip, id2){
   await new Promise(r => setTimeout(r, 500));
   id2.classList.remove("contact-information-animation");
 }
-
-document.getElementById("subjectSelect").addEventListener("change", ()=>{
-  toggleInput(document.getElementById("subjectSelect").value); 
-})
 
 document.getElementById("copyContainer1").addEventListener("click", ()=>{
   copyTextToClipboard(document.getElementById("copyContainer1"),7, document.getElementById("copyIcon1"));
