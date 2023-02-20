@@ -18,3 +18,9 @@ function toggleHamburger(){
 hamburger.addEventListener("click", ()=>{
   toggleHamburger(); 
 })
+
+
+$(window).on("load",function(){
+  $(".loader-wrapper").fadeOut("slow");
+  console.log("arroz")
+});

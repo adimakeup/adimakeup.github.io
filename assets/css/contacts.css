@@ -19,6 +19,8 @@
   --kinda-dark:#191919;
 }
 
+/* 2-Background */
+
 article.contacts-background{
   height: 50vh;
   background: url("../images/contacts.jpg");
@@ -47,6 +49,150 @@ article.contacts-background2{
   align-items: center;
   background-attachment: fixed;
 }
+
+/*3-Contact form*/
+.contact-form{
+  padding: 1em;
+  background: var(--primary-pink);
+  color: var(--secondary-pink);
+}
+
+.contact-form h2{
+  padding:1em;
+  text-align: center;
+  font-size: 2em;
+}
+
+.contact-form .contacts-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10em;
+}
+
+.contact-form .contacts-info{
+  width: 20em !important;
+  border-radius:.1em !important;
+  font-size: 1.4em;
+  font-weight: 300;
+  transition: .5s;
+  display: block;
+  margin-bottom: 1em;
+  position: relative;
+  padding: 1.5em !important;
+  cursor: pointer;
+}
+
+.contact-information-animation{
+  animation-name: copyInformation;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease;
+}
+
+@keyframes copyInformation{
+  0%{
+    font-size: 1em;
+  }
+
+  30%{
+    opacity: 0;
+  }
+
+  50%{
+    font-size:7em;
+  }
+
+  100%{
+    opacity: 0;
+  }
+}
+
+.copy-icon{
+  position: relative;
+}
+
+.copy-icon span{
+  position: absolute;
+  top: .5em;
+  left: .5em;
+  z-index: 10000;
+}
+
+.contact-form p:hover{
+  background:#555;
+}
+
+
+
+.contact-form label{
+  margin: 1em;
+}
+
+.contact-form form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact-form .input-label{
+  padding-bottom: .3em;
+  padding-right: .2em;
+}
+
+.contact-form label{
+  display: flex;
+  flex-direction: column;
+  font-size: .75em;
+}
+
+.contact-form input[type=text], .contact-form input[type=email], .contact-form textarea{
+  width:30em;
+  height:3em;
+  padding: 1em;
+  border:0;
+  border-radius:.2em;
+  background:var(--secondary-pink);
+  color: var(--light);
+}
+
+.contact-form input[type=submit]{
+  width:15em;
+  height:3em;
+  padding: 1em;
+  border:0;
+  border-radius:.2em;
+  background:var(--primary-purple);
+  color: var(--light);
+}
+
+.contact-form textarea{
+  height: 7em;
+}
+
+.required-field{
+  color: #c0392b;
+  cursor: help;
+}
+
+.required-field-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-form #subjectSelect{
+  width:30em;
+  height:3em;
+  margin-bottom: 1em;
+  padding-left: .7em;
+  border:0;
+  border-radius:.2em;
+  background: var(--secondary-pink);
+  color: var(--light);
+}
+
+
 
 /* 2-Wedding */
 article.wedding-container{
@@ -138,148 +284,7 @@ article.wedding-container .three-wedding-boxes-columns > section {
 
 
 
-/*3-Contact form*/
-.contact-form{
-  padding: 1em;
-  background: var(--primary-pink);
-  color: var(--secondary-pink);
-}
 
-.contact-form h2{
-  padding:1em;
-  text-align: center;
-  font-size: 2em;
-}
-
-.contact-form .contacts-info{
-  width: 20em !important;
-  border-radius:.1em !important;
-  font-size: 1.4em;
-  font-weight: 300;
-  transition: .5s;
-  cursor: default;
-  display: block;
-  margin-bottom: 1em;
-  position: relative;
-  padding: 1.5em !important;
-  cursor: pointer;
-}
-
-.contact-information-animation{
-  animation-name: copyInformation;
-  animation-duration: 2s;
-  animation-fill-mode: forwards;
-}
-
-@keyframes copyInformation{
-  0%{
-    font-size: 1em;
-  }
-
-  30%{
-    opacity: 0;
-  }
-
-  50%{
-    font-size:7em;
-  }
-
-  100%{
-    opacity: 0;
-  }
-}
-
-.copy-icon{
-  position: relative;
-}
-
-.copy-icon span{
-  position: absolute;
-  top: .5em;
-  left: .5em;
-  z-index: 10000;
-}
-
-.contact-form p:hover{
-  background:#555;
-}
-
-.contact-form .contacts-container{
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.contact-form .information-container{
-  margin-right: -35em;
-}
-
-.contact-form label{
-  margin: 1em;
-}
-
-.contact-form form{
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.contact-form .input-label{
-  padding-bottom: .3em;
-  padding-right: .2em;
-}
-
-.contact-form label{
-  display: flex;
-  flex-direction: column;
-  font-size: .75em;
-}
-
-.contact-form input[type=text], .contact-form input[type=email], .contact-form textarea{
-  width:30em;
-  height:3em;
-  padding: 1em;
-  border:0;
-  border-radius:.2em;
-  background:var(--secondary-pink);
-  color: var(--light);
-}
-
-.contact-form input[type=submit]{
-  width:15em;
-  height:3em;
-  padding: 1em;
-  border:0;
-  border-radius:.2em;
-  background:var(--primary-purple);
-  color: var(--light);
-}
-
-.contact-form textarea{
-  height: 7em;
-}
-
-.required-field{
-  color: #c0392b;
-  cursor: help;
-}
-
-.required-field-container{
-  display: flex;
-  flex-direction: row;
-}
-
-.contact-form #subjectSelect{
-  width:30em;
-  height:3em;
-  margin-bottom: 1em;
-  padding-left: .7em;
-  border:0;
-  border-radius:.2em;
-  background: var(--secondary-pink);
-  color: var(--light);
-}
 
 /*4-Popup*/
 .top-popup{

@@ -19,7 +19,7 @@ async function copyTextToClipboard(id, skip, id2){
   document.execCommand("copy");
   document.body.removeChild(dummy);
   id2.classList.add("contact-information-animation");
-  await new Promise(r => setTimeout(r, 2000));
+  await new Promise(r => setTimeout(r, 500));
   id2.classList.remove("contact-information-animation");
 }
 
