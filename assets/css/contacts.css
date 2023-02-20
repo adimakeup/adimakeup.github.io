@@ -1,73 +1,139 @@
 /*    Index
  *--------------
  * 1-CSS Variables
- * 2-Location
+ * 2-Wedding
  * 3-Contact form
  * 4-Top Popup
 */
 
 
 
-/*1-CSS Variables*/
+/* 1-CSS Variables */
 :root{
-  --primary-green:#00b894;
-  --primary-purple:#6562ac;
+  --primary-pink:#eddedb;
+  --secondary-purple:#6562ac;
   --secondary-blue:#81b5e2;
+  --secondary-pink:#8A6264;
   --light:#fff;
   --dark:#000;
   --kinda-dark:#191919;
 }
 
-
-
-/*2-Location*/
-.location div{
-  display: grid;
-  grid-template-columns: 2fr 1fr;
-  padding: 5em;
-  padding-top: 0;
+article.contacts-background{
+  height: 50vh;
+  background: url("../images/contacts.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
 }
 
-.location h2{
-  padding-top: 2em;
-  text-align: center;
-  font-size: 1.8em;
+article.contacts-background h2{
+  font-family: Roboto;
+  font-size: 5em;
+  color: var(--light);
 }
 
-.location div section iframe{
-  width: 100%;
-  height: 30em;
-  padding-right: 1em;
+article.contacts-background2{
+  height: 37vh;
+  background: url("../images/contacts2.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
 }
 
-.location div section:last-child{
+/* 2-Wedding */
+article.wedding-container{
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
+  padding: 2em;
 }
 
-.location div section:last-child h3{
-  line-height: 1.5;
-  font-size: 1.9em;
-  font-weight: bold;
+article.wedding-container h2{
+  font-family: Pacifico;
+  text-align: center;
+  font-size: 2em;
+  color: var(--secondary-pink);
 }
 
-.location div section:last-child p{
-  line-height: 1.5;
+article h3{
+  font-family: Mukta;
+  text-align: center;
+  font-size: 1.5em;
+}
+
+article.wedding-container .three-wedding-boxes-columns{
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  text-align: justify;
+}
+
+.three-wedding-boxes-columns section{
+  padding: 1em;
+}
+
+article.wedding-container .three-wedding-boxes-columns > section {
+  flex-basis: 22%;
+  background-position: top !important;
+  background-size: cover !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.three-wedding-boxes-columns section.casamentospt{
+  background: url("../images/casamentospt.webp");
+}
+
+.three-wedding-boxes-columns section.onossocasamentopt{
+  background: url("../images/onossocasamentopt.jpg");
+}
+
+.three-wedding-boxes-columns section.zankyoupt{
+  background: url("../images/zankyoupt.jpg");
+}
+
+.three-wedding-boxes-columns div{
+  background: var(--primary-pink);
+  font-family: 'Mukta';
+  color: var(--dark);
   font-size: 1.1em;
+  text-align: justify;
+  line-height: 1.5;
+  padding: 2em;
+  visibility: hidden;
+  transform: rotateY(180deg);
+  opacity: 0;
 }
 
-.location div section:last-child a{
-  position: relative;
-  z-index: 1;
-  border-bottom: 1px solid var(--secondary-blue);
-  color:var(--dark);
-  cursor: alias;
-  transition:.2s;
+.three-wedding-boxes-columns h3{
+  background: rgba(255,255,255,.8);
+  padding: .7em;
+  border-radius: .15em;
+  font-family: 'Mukta';
+  font-weight: bold;
+  font-size: 1.5em;
 }
 
-.location a:hover{
-  background: var(--secondary-blue);
+.three-wedding-boxes-columns h3 a{
+  color: var(--dark);
+}
+
+.three-wedding-boxes-columns section:hover > a div{
+  transition: .5s ease-in;
+  visibility: visible;
+  transform:rotateY(0deg);
+  opacity: 1;
 }
 
 
@@ -75,8 +141,8 @@
 /*3-Contact form*/
 .contact-form{
   padding: 1em;
-  background: var(--kinda-dark);
-  color: #fff;
+  background: var(--primary-pink);
+  color: var(--secondary-pink);
 }
 
 .contact-form h2{
@@ -176,7 +242,7 @@
   padding: 1em;
   border:0;
   border-radius:.2em;
-  background:#333;
+  background:var(--secondary-pink);
   color: var(--light);
 }
 
@@ -211,11 +277,9 @@
   padding-left: .7em;
   border:0;
   border-radius:.2em;
-  background:#333;
+  background: var(--secondary-pink);
   color: var(--light);
 }
-
-
 
 /*4-Popup*/
 .top-popup{
