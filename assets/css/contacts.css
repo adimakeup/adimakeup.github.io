@@ -4,6 +4,7 @@
  * 2-Background
  * 3-Contact form
  * 4-Wedding
+ * 5-CTA
 */
 
 /* 1-CSS Variables */
@@ -45,6 +46,22 @@ article.contacts-background2{
   justify-content: center;
   align-items: center;
   background-attachment: fixed;
+}
+
+.social-media-blink{
+  animation: blink infinite .7s ease;
+}
+
+@keyframes blink{
+  0%{
+    opacity: 1;
+  }
+  50%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
 }
 
 /* 3-Contact form */
@@ -299,4 +316,33 @@ article.wedding-container .three-wedding-boxes-columns > section {
   visibility: visible;
   transform:rotateY(0deg);
   opacity: 1;
+}
+
+/* 4.5-Media Queries */
+@media(max-width: 1400px){
+  article.wedding-container .three-wedding-boxes-columns > section {
+    flex-basis: 27%;
+  }
+}
+
+@media(max-width: 1200px){
+  article.wedding-container .three-wedding-boxes-columns{
+    flex-direction: column;
+    gap: 5em;
+  }
+}
+
+/* 5-CTA */
+.call-to-action{
+  padding: 2em;
+  line-height: 1.5;
+  text-align: center;
+  font-size: 1.5em;
+  background: var(--primary-pink);
+  color: var(--secondary-pink);
+}
+
+.call-to-action h3{
+  font-family: Pacifico;
+  font-size: 1.5em;
 }
