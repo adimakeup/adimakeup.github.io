@@ -91,18 +91,30 @@
 }
 
 @media(max-width: 1000px){
+  .bigabout-wrapper{
+    background-position: center;
+  }
   .bigabout-wrapper .about-wrapper{
     width: 100%;
   }
   .bigabout-wrapper2 .about-wrapper{
     width: 100%;
   }
-  .bigabout-wrapper2{
-    background: none;
+  .about{
+    background-color: rgba(0,0,0,.7);
+    color: var(--light);
+    margin: 5em;
+  }
 }
 
 @media(max-width: 600px){
+  .bigabout-wrapper{
+    background: url("../images/adrianaBG3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
   .about{
-    padding: 5em;
+    padding: 3em;
+    margin: 2em;
   }
 }
