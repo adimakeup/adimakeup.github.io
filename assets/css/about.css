@@ -1,0 +1,108 @@
+/*    Index
+ *--------------
+ * 1-CSS Variables
+ * 2-About Author
+*/
+
+/* 1-CSS Variables */
+:root{
+  --primary-pink:#eddedb;
+  --secondary-purple:#6562ac;
+  --secondary-blue:#81b5e2;
+  --secondary-pink:#8A6264;
+  --light:#fff;
+  --dark:#000;
+  --kinda-dark:#191919;
+}
+
+/* 2-Background */
+.bigabout-wrapper{
+  background: url("../images/adrianaBG.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.bigabout-wrapper2{
+  background: url("../images/adrianaBG2.png");
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.bigabout-wrapper .about-wrapper{
+  width: 70%;
+}
+
+.bigabout-wrapper2 .about-wrapper{
+  width: 70%;
+}
+
+.about2-wrapper {
+  background: var(--primary-pink);
+  padding: 1.5em 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20vh;
+  width: 100%;
+}
+
+.about2-description {
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-family: "Mukta";
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.about{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 10em;
+}
+
+.about-title{
+  font-size: 2.5em;
+  font-family: "Mukta";
+}
+
+.about-description {
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-family: "Mukta";
+  width: 80%;
+  text-align: justify;
+}
+
+/* 4.5-Media Queries */
+@media(max-width: 1300px){
+  .about-description{
+    width: 100%;
+  }
+}
+
+@media(max-width: 1000px){
+  .bigabout-wrapper .about-wrapper{
+    width: 100%;
+  }
+  .bigabout-wrapper2 .about-wrapper{
+    width: 100%;
+  }
+  .bigabout-wrapper2{
+    background: none;
+}
+
+@media(max-width: 600px){
+  .about{
+    padding: 5em;
+  }
+}
