@@ -31,7 +31,7 @@ article.contacts-background{
 }
 
 article.contacts-background h2{
-  font-family: Roboto;
+  font-family: "Roboto";
   font-size: 5em;
   color: var(--light);
 }
@@ -72,7 +72,9 @@ article.contacts-background2{
 }
 
 .contact-form h2{
-  padding:1em;
+  font-family: "Mukta";
+  font-weight: bold;
+  padding: 1em;
   text-align: center;
   font-size: 2em;
 }
@@ -156,7 +158,7 @@ article.contacts-background2{
 .contact-form label{
   display: flex;
   flex-direction: column;
-  font-size: .75em;
+  font-size: .8em;
 }
 
 .contact-form input[type=text], .contact-form input[type=email], .contact-form textarea{
@@ -343,6 +345,6 @@ article.wedding-container .three-wedding-boxes-columns > section {
 }
 
 .call-to-action h3{
-  font-family: Pacifico;
+  font-family: "Mukta";
   font-size: 1.5em;
 }

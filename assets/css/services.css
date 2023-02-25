@@ -21,7 +21,7 @@
 /* 2-Background */
 article.services-background{
   height: 50vh;
-  background: url("../images/contacts.jpg");
+  background: url("../images/services.jpg");
   background-position: center;
   background-size: cover;
   display: flex;
