@@ -62,13 +62,12 @@
   width: 100%;
 }
 
-
 .about2-wrapper p{
  width: 70%;
  margin: 1em 0;
 }
 
-.about2-description {
+.about2-description{
   font-size: 1.2em;
   line-height: 1.5;
   font-family: "Mukta";
@@ -92,7 +91,7 @@
   font-family: "Mukta";
 }
 
-.about-description {
+.about-description{
   font-size: 1.2em;
   line-height: 1.5;
   font-family: "Mukta";
@@ -100,7 +99,18 @@
   text-align: justify;
 }
 
-/* 4.5-Media Queries */
+.about-description a{
+  cursor: alias;
+  transition: .2s ease;
+}
+
+.about-description a:hover{
+  background: var(--secondary-blue);
+  color: var(--dark);
+  padding: .1em;
+}
+
+/* 2.5-Media Queries */
 @media(max-width: 1300px){
   .about-description{
     width: 100%;
