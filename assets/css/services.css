@@ -2,9 +2,9 @@
  *--------------
  * 1-CSS Variables
  * 2-Background
- * 3-Contact form
- * 4-Wedding
- * 5-CTA
+ * 3-Services
+ * 4-FAQ
+ * 5-Services CTA
 */
 
 /* 1-CSS Variables */
@@ -140,7 +140,7 @@ h2{
   text-align: center;
 }
 
-p{
+.back p{
   padding: 2em;
   color: #fff;
   z-index: 10000;
@@ -214,4 +214,72 @@ article.messages h3{
   article.messages{
     gap: 2em;
   }
+}
+
+/* 4-FAQ */
+.faq{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Mukta";
+}
+
+.faq h2{
+  color: var(--dark);
+  font-weight: bold;
+  font-size: 1.7em;
+  padding: .7em;
+}
+
+.questions{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 60%;
+}
+
+.questions section{
+  background: var(--primary-pink);
+  padding: 1em;
+  margin: 1em;
+  border-radius: .15em;
+  width: 100%;
+}
+
+.questions p{
+  margin: 0;
+}
+
+.questions a{
+  cursor: alias;
+  transition: .2s ease;
+}
+
+.questions a:hover{
+  background: var(--secondary-blue);
+  color: var(--dark);
+  padding: .1em;
+}
+
+/* 5-Services CTA */
+.services-cta-wrapper{
+  background: var(--primary-pink);
+  padding: 1.5em 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.services-cta{
+  font-size: 1.2em;
+  line-height: 1.5;
+  font-family: "Mukta";
+  text-align: justify;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
 }
