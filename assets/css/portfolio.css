@@ -1,0 +1,38 @@
+/*    Index
+ *--------------
+ * 1-CSS Variables
+ * 2-Background
+ * 3-Contact form
+ * 4-Wedding
+ * 5-CTA
+*/
+
+/* 1-CSS Variables */
+:root{
+  --primary-pink:#eddedb;
+  --secondary-purple:#6562ac;
+  --secondary-blue:#81b5e2;
+  --secondary-pink:#8A6264;
+  --light:#fff;
+  --dark:#000;
+  --kinda-dark:#191919;
+}
+
+/* 2-Background */
+article.portfolio-background{
+  height: 50vh;
+  background: url("../images/contacts.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+
+article.portfolio-background h2{
+  font-family: Roboto;
+  font-size: 5em;
+  color: var(--light);
+  flex-wrap: wrap;
+}

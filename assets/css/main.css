@@ -217,6 +217,7 @@ nav a:hover{
   nav.mobile-menu{
     display: flex;
     justify-content: flex-end;
+    z-index: 10000000;
   }
 
   nav.mobile-menu ul{
