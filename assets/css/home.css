@@ -98,14 +98,8 @@ div.scroll-outline{
   border: 2px solid rgba(255,255,255,.5);
   border-radius: 25px;
   animation-name: scrollOpacity;
-  -webkit-animation-duration: 3s;
-  -o-animation-duration: 3s;
-  -moz-animation-duration: 3s;
   animation-duration: 3s;
   animation-delay: 1s;
-  -webkit-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
@@ -119,14 +113,8 @@ div.scroll-dot{
   border-radius: 50%;
   opacity: 0;
   animation-name: scrolldown;
-  -webkit-animation-duration: 3s;
-  -o-animation-duration: 3s;
-  -moz-animation-duration: 3s;
   animation-duration: 3s;
   animation-delay: 1s;
-  -webkit-animation-iteration-count: infinite;
-  -o-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
 }
 
