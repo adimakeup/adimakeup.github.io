@@ -433,7 +433,7 @@ footer hr{
 footer .copyright{
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
 }
 
@@ -495,7 +495,7 @@ footer .socialMedia-footer li:hover i{
 }
 
 /* 6.5-Media Queries */
-@media(max-width: 700px){
+@media(max-width: 1050px){
   .footer-sections{
     flex-direction: column;
     justify-content: space-around;
@@ -504,7 +504,7 @@ footer .socialMedia-footer li:hover i{
     gap: 2em;
   }
   
-  footer .contact-footer li{
+  footer .contact-footer li,footer .designed-by-footer li{
     justify-content: center;
   }
 }
