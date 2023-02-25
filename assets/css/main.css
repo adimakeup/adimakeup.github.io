@@ -430,12 +430,37 @@ footer hr{
   margin: 2em auto;
 }
 
-footer p{
+footer .copyright{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .copyright p{
   padding-top: 1em;
+}
+
+footer .copyright p:last-child{
+  font-size: .9em;
+  font-family: "Mukta";
+  color: #555;
+  width: 70%;
+  padding: 0;
   text-align: center;
 }
 
 footer .contact-footer li{
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  font-size: .9em;
+  line-height: 1.4;
+  color: var(--dark);
+  opacity: .85;
+}
+
+footer .designed-by-footer li{
   display: flex;
   justify-content: start;
   align-items: center;
@@ -484,7 +509,7 @@ footer .socialMedia-footer li:hover i{
   }
 }
 
-/* 7-Footer */
+/* 7-Loader */
 .loader-wrapper{
   position: fixed;
   width: 100%;
