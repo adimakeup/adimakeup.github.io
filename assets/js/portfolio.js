@@ -71,6 +71,7 @@ for (let i = 0; i < images.length; i++) {
     }
     else{
       document.getElementById("body").style.overflow = "hidden"
+      carouselGallery.style.transform = null;
     }
   });
 }

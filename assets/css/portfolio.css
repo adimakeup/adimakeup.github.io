@@ -62,7 +62,7 @@ article.portfolio-background h2{
 }
 
 .video-carousel li{
-  display: grid;
+  display: flex;
   place-items: center;
   width: 560px;
   height: 315px;
@@ -70,15 +70,24 @@ article.portfolio-background h2{
 }
 
 .video-carousel li:last-child{
-  background: url("../images/youtube.jpg");
-  background-size: cover;
-  background-position: center;
   display: flex;
   flex-direction: column;
   gap: .5em;
   justify-content: center;
   align-items: center;
   position: relative;
+}
+
+.video-carousel li.instagram{
+  background: url("../images/instagram.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.video-carousel li.youtube{
+  background: url("../images/youtube.jpg");
+  background-size: cover;
+  background-position: center;
 }
 
 .video-carousel li:last-child::after{
@@ -88,7 +97,7 @@ article.portfolio-background h2{
   position: absolute;
   top:0;
   left:0;
-  background-color: rgba(0,0,0,.5);
+  background-color: rgba(0,0,0,.7);
 }
 
 .video-carousel li:last-child h3{
@@ -98,17 +107,34 @@ article.portfolio-background h2{
 }
 
 .video-carousel li:last-child a{
-  background-color: #ff0000;
   border-radius: .15em;
-  padding: .3em;
+  padding: .5em;
   color: var(--light);
   z-index: 1000;
   font-size: 1.5em;
+  transition: .5s ease;
+}
+
+.video-carousel li.instagram a{
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%,#d6249f 60%,#285AEB 90%);
+}
+
+.video-carousel li:last-child a:hover{
+  transform: rotate(2deg);
+}
+
+.video-carousel li:last-child a:active{
+  transform: scale(.9);
+}
+
+.video-carousel li.youtube a{
+  background-color: #ff0000;
 }
 
 .video-carousel img{
   width: 100%;
   height: 100%;
+  object-fit: cover;
   cursor: pointer;
   transition: .5s ease;
 }
