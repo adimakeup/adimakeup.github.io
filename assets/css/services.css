@@ -250,6 +250,7 @@ article.messages h3{
 
 .questions p{
   margin: 0;
+  line-height: 1.5;
 }
 
 .questions a{
