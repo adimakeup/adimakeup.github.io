@@ -7,7 +7,12 @@ const itemWidth = carouselItems[0].offsetWidth;
 let currentPosition = 0;
 
 function moveCarousel(position) {
-  carouselGallery.style.transform = `translateX(${position}px)`;
+  if(position == 0){
+    carouselGallery.style.transform = null;
+  }
+  else{
+    carouselGallery.style.transform = `translateX(${position}px)`;
+  }
 }
 
 function scrollLeft() {
@@ -54,3 +59,18 @@ carouselWrapper.addEventListener('touchstart', (e) => {
   document.addEventListener('touchmove', touchMove);
   document.addEventListener('touchend', touchEnd);
 });
+
+
+const images = document.querySelectorAll(".enlargeable");
+for (let i = 0; i < images.length; i++) {
+  images[i].addEventListener("click", function() {
+    this.classList.toggle("enlarge");
+    document.querySelector(".enlarge-background").classList.toggle("visible");
+    if(document.getElementById("body").style.overflow == "hidden"){
+      document.getElementById("body").style.overflow = "visible"
+    }
+    else{
+      document.getElementById("body").style.overflow = "hidden"
+    }
+  });
+}

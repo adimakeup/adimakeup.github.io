@@ -470,6 +470,20 @@ footer .designed-by-footer li{
   opacity: .85;
 }
 
+footer .designed-by-footer a{
+  font-size: 1em;
+  line-height: 1.4;
+  color: #2980b9;
+  cursor: alias;
+  transition: .15s ease;
+}
+
+footer .designed-by-footer a:hover{
+  background: var(--secondary-blue);
+  color: var(--light);
+  padding: .15em;
+}
+
 .no-copy {
   display: inline-block;
   border-bottom: 1px solid white;

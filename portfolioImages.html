@@ -25,13 +25,13 @@
   <meta property="og:type" content="website">
 
   <!-- Title -->
-  <title>Adi Makeup | Sobre</title>  
+  <title>Adi Makeup Atelier | Portfolio - Imagens</title>
   
   <!-- Minified css reset and main css -->
   <link rel="stylesheet" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/main.css">
   <!-- Page specific css -->
-  <link rel="stylesheet" href="assets/css/about.css">
+  <link rel="stylesheet" href="assets/css/portfolio.css">
   
   <!-- Icons -->
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons"                                           rel="stylesheet">
@@ -42,7 +42,7 @@
   <link href="assets/icon/favicon.png" rel="icon">
 </head>
 <body id="body">
-  <h1 class="hidden-heading">Página de sobre</h1>
+  <h1 class="hidden-heading">Página de portfolio de Imagens</h1>
   <!-- Content-wrapper -->
   <main>
     <!-- Header -->
@@ -67,12 +67,12 @@
             </a>
             <ul>
               <li><a href="portfolioImages.html">Portfolio - imagens</a></li>
-              <li><a href="portfolioVideo.html">Portfolio - videos</a></li>
+              <li><a href="portfolioVideo.html" class="current-page">Portfolio - videos</a></li>
             </ul>
           </li>
           <li><a href="services.html">Serviços</a></li>
           <li><a href="contacts.html">Contactos</a></li>
-          <li><a href="about.html" class="current-page">Sobre</a></li>
+          <li><a href="about.html">Sobre</a></li>
         </ul>
       </nav>
       <!-- Menu mobile -->
@@ -82,53 +82,35 @@
         <ul id="mobileMenu">
           <li><a href="index.html">Home</a></li>
           <li><a href="portfolioImages.html">Portfolio de imagens</a></li>
-          <li><a href="portfolioVideo.html">Portfolio de vídeos</a></li>
+          <li><a href="portfolioVideo.html" class="current-page-mobile">Portfolio de vídeos</a></li>
           <li><a href="services.html">Serviços</a></li>
           <li><a href="contacts.html">Contactos</a></li>
-          <li><a href="about.html" class="current-page-mobile">Sobre</a></li>
+          <li><a href="about.html">Sobre</a></li>
         </ul>
       </nav>
     </header>
-    <!-- BigAbout wrapper -->
-    <article class="bigabout-wrapper">
-      <h2 class="hidden-heading">Sobre</h2>
-      <section class="about-wrapper">
-        <h3 class="hidden-heading">Sobre a Adriana</h3>
-        <section class="about">
-          <h2 class="about-title">Olá! Eu sou a Adriana</h2>
-          <p class="about-description">
-            Sou a Adriana Bulat (Adi), uma artista de cabelo e maquilhagem com mais de 10 anos de experiência em maquilhagem e 14 anos como cabeleireira. Desde sempre gostei de arte e comecei a minha carreira por necessidade, mas rapidamente percebi que esta seria a minha paixão.
-          </p>
-        </section>
-      </section>
-      <section class="about2-wrapper">
-        <h3 class="hidden-heading">Motivação</h3>
-        <p class="about2-description">
-          O que mais me motiva é a transformação que consigo alcançar com a maquilhagem, através de um antes e depois impressionante, e a construção de penteados únicos que realçam a beleza natural de cada cliente. Trabalhar com noivas é uma das minhas áreas preferidas, pois amo ser parte do seu dia especial.
-        </p>
-        <p class="about2-description">
-          Sou formada em cabeleireiro na Moldávia e realizei vários cursos e formações em maquilhagem em escolas da mesma região. Atualmente, continuo a aprimorar as minhas habilidades através de atualizações online e formações presenciais em vários países.
-        </p>
-      </section>  
+    <!-- Background -->
+    <article class="portfolio-background">
+      <h2>Os meus vídeos</h2>
     </article>
-    <article class="bigabout-wrapper2">
-      <h2 class="hidden-heading">Sobre</h2>
-      <section class="about-wrapper">
-        <h3 class="hidden-heading">Especialista</h3>
-        <section class="about">
-          <h2 class="about-title">Beleza personalizada por especialista</h2>
-          <p class="about-description">
-            A minha carreira profissional permitiu-me estar presente em grandes eventos de moda nacional e internacional, como por exemplo o "Carnival of Luxury" com <a href="https://www.instagram.com/joao_rolo_couture/?hl=en" target="_blank">@João Rolo</a>, <a href="https://ivandonev.com/" target="_blank">@Iván Donev</a>, entre outros, o evento "z.one.concept" em Ponta de Umbria (Espanha), "parisfaschion" (academia de modelos) e "blanco" em Portimão. Também tive o prazer de criar looks para artistas como <a href="https://www.instagram.com/pequena_soraia/?hl=en" target="_blank">@soraiatavares</a>, sempre acompanhando as tendências e técnicas artísticas mais atuais.
-          </p>
-          <p class="about-description">
-            Espero ter a oportunidade de lhe mostrar a minha paixão pelo mundo da beleza e ajudá-la a realçar a sua própria beleza natural. Entre em contato comigo para agendar uma consulta personalizada.
-          </p>
-        </section>
-      </section>
-      <section class="about3-wrapper">
-        <h3 class="hidden-heading">CTA</h3>
-        <p class="about2-description" style="margin-right: 1em;">Gosta do que leu?</p><a href="contacts.html" class="cta-button3">Contacte-me!</a>
-      </section>
+    <!-- Video Carousel -->
+    <article class="video-carousel" id="videoCarousel">
+      <div class="carousel-wrapper">
+        <ul id="carouselGallery">
+          <li><img src="assets/images/eyebrows.jpg" class="enlargeable" alt=""></li>
+          <li>
+            <h3>Veja mais no</h3><a href="https://www.youtube.com/@adimake-upatelier8715" target="_blank">YouTube</a>
+          </li>
+        </ul>
+      </div>
+      <div class="carousel-arrow left-arrow">&#8592;</div>
+      <div class="carousel-arrow right-arrow">&#8594;</div>
+    </article>
+    <article class="enlarge-background"></article>
+    <!-- CTA -->
+    <article class="portfolio-cta-wrapper">
+      <h2 class="hidden-heading">Contact-me</h2>
+      <p class="portfolio-cta" style="margin-right: 1em;">Gosta do que viu?</p><a href="contacts.html" class="cta-button3">Contacte-me!</a>
     </article>
     <!-- Footer -->
     <footer>
@@ -188,6 +170,9 @@
   
   <!--Main js-->
   <script src="assets/js/main.js"></script>
+  
+  <!--Page specific js-->
+  <script src="assets/js/portfolio.js"></script>
   
   <!-- Icon js -->
   <script src="https://kit.fontawesome.com/52b0b0a261.js" crossorigin="anonymous"></script>
