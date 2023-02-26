@@ -65,6 +65,7 @@ const images = document.querySelectorAll(".enlargeable");
 for (let i = 0; i < images.length; i++) {
   images[i].addEventListener("click", function() {
     this.classList.toggle("enlarge");
+    this.classList.toggle("imgBig");
     document.querySelector(".enlarge-background").classList.toggle("visible");
     if(document.getElementById("body").style.overflow == "hidden"){
       document.getElementById("body").style.overflow = "visible"

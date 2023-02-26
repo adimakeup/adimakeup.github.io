@@ -29,6 +29,17 @@ article.portfolio-background{
   background-attachment: fixed;
 }
 
+article.portfolio-background2{
+  height: 50vh;
+  background: url("../images/portfolio2.jpg");
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-attachment: fixed;
+}
+
 article.portfolio-background h2{
   font-family: Roboto;
   font-size: 5em;
@@ -37,7 +48,13 @@ article.portfolio-background h2{
   text-align: center;
 }
 
-
+article.portfolio-background2 h2{
+  font-family: Roboto;
+  font-size: 5em;
+  color: var(--light);
+  flex-wrap: wrap;
+  text-align: center;
+}
 /* 3-Video Carousel */
 .video-carousel{
   display: grid;
@@ -136,11 +153,14 @@ article.portfolio-background h2{
   height: 100%;
   object-fit: cover;
   cursor: pointer;
+}
+
+.video-carousel .imgBig{
   transition: .5s ease;
 }
 
-.video-carousel img:hover{
-  width: 110%;
+.video-carousel .imgBig:hover{
+  transform: scale(1.1);
 }
 
 .enlarge{
